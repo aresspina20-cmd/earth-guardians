@@ -1,0 +1,26 @@
+name: Sync with Lovable Design
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Add lovable remote
+        run: git remote add lovable https://github.com/aresspina20-cmd/earth-guardians-hub.git || true
+      
+      - name: Fetch from lovable
+        run: git fetch lovable main
+      
+      - name: Reset to lovable main
+        run: git reset --hard lovable/main
+      
+      - name: Push to origin
+        run: git push origin main --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
