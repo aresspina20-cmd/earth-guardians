@@ -5,16 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Earth Guardians Hub</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; text-align: center; background-color: #f5f5f5; }
-    h1 { color: #333; }
-    p { color: #666; font-size: 1.1rem; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f5; color: #333; }
+    nav { background-color: #2c3e50; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: background-color 0.3s; }
+    nav a:hover { background-color: #34495e; }
+    nav a.active { background-color: #3498db; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+    .page { display: none; }
+    .page.active { display: block; }
+    h1 { color: #2c3e50; margin: 1rem 0; }
+    h2 { color: #34495e; margin: 1.5rem 0 1rem 0; }
+    p { line-height: 1.6; margin-bottom: 1rem; }
+    .card { background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
   </style>
 </head>
 <body>
-  <div id="root">
-    <h1>Welcome to Earth Guardians</h1>
-    <p>This is a test page to verify the site is working.</p>
-    <p style="margin-top: 2rem; color: #999;">If you see this, the deployment is successful!</p>
+  <nav>
+    <ul>
+      <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+      <li><a href="#" class="nav-link" data-page="antropocene">L'Antropocene</a></li>
+      <li><a href="#" class="nav-link" data-page="crisi">Crisi Climatica</a></li>
+      <li><a href="#" class="nav-link" data-page="agenda">Agenda 2030</a></li>
+      <li><a href="#" class="nav-link" data-page="energia">Risorse Energetiche</a></li>
+      <li><a href="#" class="nav-link" data-page="acqua">L'Acqua</a></li>
+      <li><a href="#" class="nav-link" data-page="rifiuti">I Rifiuti</a></li>
+      <li><a href="#" class="nav-link" data-page="economia">Economia Circolare</a></li>
+      <li><a href="#" class="nav-link" data-page="crediti">Crediti</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div id="home" class="page active">
+      <h1>Welcome to Earth Guardians</h1>
+      <div class="card">
+        <h2>La Tutela Ambientale</h2>
+        <p>Un percorso educativo per comprendere le sfide ambientali del nostro tempo e scoprire come ciascuno di noi può contribuire a un futuro sostenibile.</p>
+        <p>Questo sito è dedicato all'educazione civica e ambientale, esplorando temi cruciali come il cambiamento climatico, la sostenibilità e l'economia circolare.</p>
+      </div>
+    </div>
+
+    <div id="antropocene" class="page">
+      <h1>L'Antropocene</h1>
+      <div class="card">
+        <p>L'Antropocene è l'epoca geologica in cui l'impatto umano è diventato la forza dominante nel modificare il pianeta. A partire dalla Rivoluzione Industriale, le attività umane hanno avuto effetti globali senza precedenti.</p>
+        <h3>La Timeline dell'Antropocene:</h3>
+        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+          <li><strong>1850:</strong> Inizio dell'era industriale - CO2: 280 ppm</li>
+          <li><strong>1950:</strong> Grande Accelerazione - CO2: 310 ppm</li>
+          <li><strong>2000:</strong> Riconsciumento scientifico - CO2: 370 ppm</li>
+          <li><strong>Oggi:</strong> Epoca attuale - CO2: 420+ ppm</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="crisi" class="page">
+      <h1>Crisi Climatica</h1>
+      <div class="card">
+        <p>Il cambiamento climatico causato dalle attività umane è una delle maggiori sfide del nostro tempo. L'aumento della concentrazione di gas serra nell'atmosfera sta provocando un riscaldamento globale senza precedenti.</p>
+        <h3>Cause Principali:</h3>
+        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+          <li>Combustione di combustibili fossili</li>
+          <li>Deforestazione</li>
+          <li>Agricoltura intensiva</li>
+          <li>Industria pesante</li>
+        </ul>
+        <h3>Conseguenze:</h3>
+        <ul style="margin-left: 2rem;">
+          <li>Aumento delle temperature globali</li>
+          <li>Innalzamento del livello dei mari</li>
+          <li>Eventi meteorologici estremi</li>
+          <li>Perdita di biodiversità</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="agenda" class="page">
+      <h1>Agenda 2030</h1>
+      <div class="card">
+        <p>L'Agenda 2030 è un programma d'azione globale per lo sviluppo sostenibile, composto da 17 Obiettivi di Sviluppo Sostenibile (SDGs) adottati dall'ONU.</p>
+        <h3>I 17 Obiettivi:</h3>
+        <ul style="margin-left: 2rem;">
+          <li>1. Sconfiggere la povertà</li>
+          <li>2. Sconfiggere la fame</li>
+          <li>3. Salute e benessere</li>
+          <li>4. Istruzione di qualità</li>
+          <li>5. Parità di genere</li>
+          <li>6. Acqua pulita e igiene</li>
+          <li>7. Energia pulita e accessibile</li>
+          <li>8. Lavoro dignitoso</li>
+          <li>9. Industria, innovazione e infrastrutture</li>
+          <li>10. Ridurre le disuguaglianze</li>
+          <li>11. Città e comunità sostenibili</li>
+          <li>12. Consumo e produzione responsabili</li>
+          <li>13. Lotta contro il cambiamento climatico</li>
+          <li>14. Vita sott'acqua</li>
+          <li>15. Vita sulla terra</li>
+          <li>16. Pace, giustizia e istituzioni forti</li>
+          <li>17. Partnership per gli obiettivi</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="energia" class="page">
+      <h1>Risorse Energetiche</h1>
+      <div class="card">
+        <p>La transizione verso fonti energetiche rinnovabili è essenziale per combattere il cambiamento climatico. Dobbiamo passare da un modello basato su combustibili fossili a uno basato su energie pulite.</p>
+        <h3>Energie Rinnovabili:</h3>
+        <ul style="margin-left: 2rem;">
+          <li><strong>Solare:</strong> Energia dal sole - pulita e infinita</li>
+          <li><strong>Eolica:</strong> Energia dal vento - affidabile e scalabile</li>
+          <li><strong>Idroelettrica:</strong> Energia dall'acqua - una delle più efficienti</li>
+          <li><strong>Geotermica:</strong> Energia dal calore terrestre</li>
+          <li><strong>Biomassa:</strong> Energia da materiali biologici</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="acqua" class="page">
+      <h1>L'Acqua</h1>
+      <div class="card">
+        <p>L'acqua è la risorsa più preziosa del pianeta. La sua gestione sostenibile è cruciale per il futuro dell'umanità, specialmente in un'epoca di cambiamento climatico.</p>
+        <h3>Sfide Idriche Globali:</h3>
+        <ul style="margin-left: 2rem;">
+          <li>Scarsità d'acqua in molte regioni</li>
+          <li>Inquinamento delle acque</li>
+          <li>Sovrasfruttamento delle falde acquifere</li>
+          <li>Accesso disuguale all'acqua potabile</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="rifiuti" class="page">
+      <h1>I Rifiuti</h1>
+      <div class="card">
+        <p>Il problema dello smaltimento dei rifiuti è uno dei più urgenti. La plastica, in particolare, rappresenta una minaccia significativa per l'ambiente marino e terrestre.</p>
+        <h3>Impatto della Plastica:</h3>
+        <ul style="margin-left: 2rem;">
+          <li>Inquinamento degli oceani</li>
+          <li>Tossicità per la fauna selvatica</li>
+          <li>Accumulo nel nostro corpo (microplastiche)</li>
+          <li>Persistenza ambientale di 500+ anni</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="economia" class="page">
+      <h1>Economia Circolare</h1>
+      <div class="card">
+        <p>L'economia circolare rappresenta un cambio di paradigma dal modello lineare (produce-usa-scarta) a un modello sostenibile dove i materiali vengono riutilizzati e riciclati.</p>
+        <h3>Principi dell'Economia Circolare:</h3>
+        <ul style="margin-left: 2rem;">
+          <li>Progettazione sostenibile</li>
+          <li>Riduzione dei rifiuti</li>
+          <li>Riutilizzo e riciclaggio</li>
+          <li>Condivisione delle risorse</li>
+          <li>Simbiosi industriale</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="crediti" class="page">
+      <h1>Crediti</h1>
+      <div class="card">
+        <h3>Earth Guardians Hub</h3>
+        <p><strong>Corso:</strong> Educazione Civica</p>
+        <p><strong>Classe:</strong> Classi Quinte</p>
+        <p><strong>Anno Scolastico:</strong> 2025-2026</p>
+        <p><strong>Tema:</strong> La Tutela Ambientale</p>
+        <p style="margin-top: 1.5rem;">Questo progetto è stato realizzato per promuovere la consapevolezza ambientale e l'educazione civica tra i giovani studenti.</p>
+      </div>
+    </div>
   </div>
+
+  <script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.dataset.page;
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(page).classList.add('active');
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        window.scrollTo(0, 0);
+      });
+    });
+  </script>
 </body>
 </html>
