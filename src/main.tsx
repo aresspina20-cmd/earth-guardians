@@ -5,6 +5,7 @@ import "./index.css";
 console.log('App mounting...');
 
 try {
-
-createRoot(document.getElementById("root")!).render(<App />);
-  } catch (error) { console.error('App mounting error:', error)
+  createRoot(document.getElementById("root")!).render(<App />);
+} catch (error) {
+  console.error('App mounting error:', error);
+}
